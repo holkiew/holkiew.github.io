@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sportlight</title>
+  <meta name="description" content="Sportlight">
+  <meta name="author" content="Sportlight">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+<img class="img-fluid img-elipse" src="elipse.svg"/>
+  <div class="container-fluid black-canvas">
+	  <div class="row align-items-center">
+		<div class="col-lg-6 col-md-12">
+			<p class="sportlight-logo-text">Sportlight</p></div>
+		<div class="col-lg-6 col-md-12">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="header-routes pink-route" >STRONA GŁÓWNA</span>
+					<span class="header-routes white-route" id="jaktodziala">JAK TO DZIAŁA</span>
+					<span class="header-routes white-route">SPORTLIGHT.BIZ</span>
+					<span class="header-routes white-route">KONTAKT</span>
+					<button type="button" class="btn btn-primary btn-sm" id="login-button">LOGIN</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="row" id="text-row">
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+			<div class="row">
+				<div class="col-lg-9 offset-lg-3 offset-md-2">
+					<p class="text1">Znajdź klub sportowy odpowiadający wszystkim Twoim potrzebom</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-3 offset-md-2">
+					<p class="text2">Sportlight to kompleksowa i opiniotwórcza wyszukiwarka usług sportowych na miarę Twoich potrzeb. Selekcjonuj kluby po ododległości, cenie czy opiniach użytkowników i zarezerwuj miejsce dla siebie bez wychodzenia z domu!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="offset-lg-3 col-lg-3 offset-md-3 col-sm-5 col-xs-12 text-center text-md-left">
+					<button type="button" class="btn btn-primary btn-sm" id="more-button">Dowiedz się więcej</button>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 text-center text-md-left mt-sm-0" style="margin-top: 2vh;">
+					<button type="button" class="btn btn-primary btn-sm" id="search-button">Zacznij wyszukiwanie</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 d-none d-sm-block"  style="left: -5vw">
+			<img class="img-fluid" src="contender.svg"/>
+		</div>
+	  </div>
+	</div>
+  <div class="container-fluid white-canvas" id="whiteCanv">
+	<div class="row  first-row">
+		<div class="col-lg-8 col-md-8 col-sm-8">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-5 col-md-6 offset-md-5">
+					<p align="center" class="title-row-2page">Jak to działa?</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-4 text4">
+					<p align="center">Zaoszczędź swój czas i pieniądze. Trafiaj do najlepszych, w pełni wyposażonych miejsc oferującą opiekę wykształconych i doświadczonych trenerów i nauczycieli.</p>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 10vh;">
+				<div class="col-lg-8 offset-lg-2 offset-md-1 text5" align="left">
+					<p>Od teraz nie musisz przeszukiwać dziesiątek stron klubów sportowych, klubów fitness, szkół tańca czy szkół jogi, aby sprawdzić które miejsca akceptują twoją kartę sportową i oferują interesujące zajęcia w bezpiecznych warunkach. Skorzystaj z naszej wyszukiwarki i filtruj wyniki według swoich potrzeb. Wolisz miejsca skierowane wyłącznie do kobiet? Zależy ci, aby klub znajdował się po drodze do pracy? Szukasz siłowni mającej w pełni wyposażoną szatnię, aby przed pracą skorzystać z żelazka? Nie ma problemu! Nie marnuj czasu na sprawdzanie nowych miejsc na własnej skórze i zaufaj rzetelnym opiniom prawdziwych osób Sportlight daje możliwość wystawienia oceny danemu miejsu wyłącznie osobom, które są lub był zapisane do ocenianej grupy zajęciowej!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 col-xs-12  offset-lg-2 offset-md-1 text-align-center-sm-below">
+					<button type="button" class="btn btn-primary btn-sm" id="more-button2">Zacznij szukać</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 d-none d-sm-block" style="left: -5vw">
+			<img class="img-fluid" src="babka.svg"/>
+		</div>
+	</div>
+  </div>
+<script>
+
+$(document).ready(function(){
+$(document)
+    .on('click', '#jaktodziala', function(e) {
+		console.info("dsadsa");
+        e.preventDefault();
+        var x = $(window).height() + $(window).scrollTop();
+        $('html, body')
+            .animate({
+                scrollTop: x}, 'slow', 'swing', function() {});
+    });
+	});
+	
+	$.ajax({
+  type: "POST",
+  url: url,
+  data: data,
+  success: success,
+  dataType: dataType
+});
+</script>  
+</body>
+</html>

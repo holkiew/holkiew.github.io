@@ -1,0 +1,46 @@
+@media screen and (min-width: 1300px) {
+  .img-elipse {
+	--left: -47vw;
+	--margin-top: 55vh;
+	--max-height: 31vw;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .img-elipse {
+	visibility: hidden;
+	position: absolute;
+  }
+}
+
+#submit-button {
+	padding:.5rem 2.5rem;
+	border-radius: 48px;
+	background-color: #FB3B64;
+	border-color: #FB3B64;
+}
+
+.img-elipse {
+	margin-left: -11vw;
+  }
+
+body p {
+	font-family: "Poppins";
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), -1px 1px 6px 0px rgba(251,19,50,1)!important;
+}
+
+.form-control {
+	font-family: "Poppins";
+	border-color: #FB3B64!important;
+}
+
+.kontakt {
+	font-size: 2rem;
+}
+
+
+
+

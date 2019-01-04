@@ -1,0 +1,92 @@
+.gray-canvas {
+	background-color: #F8F6F6;
+	min-height: 100vh;
+}
+
+.biz-text1 {
+	font-size: 1.8rem;
+	color: #071828;
+	font-family: "Poppins";
+font-style: normal;
+	font-weight: 600;
+}
+
+.biz-text2 {
+	font-size: 0.9rem;
+	color: #071828;
+	font-family: "Poppins";
+	line-height: 1.1;
+}
+
+#tile {
+	padding: 1rem 1rem 0rem 1rem;
+	height: 100%;
+	background-color: #FCFCFC;
+	margin-bottom: 0;
+	border-radius: 18px;
+	border-bottom-width: 18px;
+	border-bottom-style: solid;
+	border-color: white;
+}
+
+#tile:hover {
+	-webkit-box-shadow: 0px 6px 13px 0px rgba(156,137,156,1);
+	-moz-box-shadow: 0px 6px 13px 0px rgba(156,137,156,1);
+	box-shadow: 0px 6px 13px 0px rgba(156,137,156,1);
+}
+
+#column-position{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#image-row {
+	margin-bottom: 1rem;
+}
+
+#tile-img {
+	max-height: 5vh;
+}
+
+#tile-header {
+	font-size: 1rem;
+	color: black;
+	font-family: "Poppins";
+	font-weight: 900;
+	margin-bottom: 4px;
+}
+
+#tile-text {
+	font-size: 0.8rem;
+	color: black;
+	font-family: "Poppins";
+	line-height: 1.3;
+}
+
+body .p-1{
+	   padding: .1rem!important;
+}
+
+.p-8 {
+	flex-grow: 1;
+}
+
+.black-canvas {
+  background-color: #071828;
+  height: 100vh;
+}
+
+.white-canvas {
+  background-color: white;
+  height: 100vh;
+}
+
+
+#login-button {
+	padding:.5rem 2.5rem;
+	border-radius: 48px;
+	background-color: #FB3B64;
+	border-color: #FB3B64;
+}
+
+

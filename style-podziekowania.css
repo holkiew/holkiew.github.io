@@ -1,0 +1,46 @@
+.black-canvas {
+  background-color: #071828;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body p {
+	font-family: "Poppins";
+	color: white;
+}
+
+#submit-button {
+	padding:.5rem 2.5rem;
+	border-radius: 48px;
+	background-color: #FB3B64;
+	border-color: #FB3B64;
+}
+
+.text-title {
+	font-size: 2.7rem;
+}
+
+.text-below-title {
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 590px) {
+  .img-elipse {
+	visibility: hidden;
+	position: absolute;
+  }
+}
+
+.img-elipse {
+	margin-top: 50vh;
+	margin-left: -11vw;
+  }
+  
+@media screen and (max-width: 800px) {
+  .text-title {
+	font-size: 1.5rem;
+}
+.text-below-title {
+	font-size: 1rem;
+}
+}

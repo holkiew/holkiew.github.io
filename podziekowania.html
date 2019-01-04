@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Sportlight</title>
+  <meta name="description" content="Sportlight">
+  <meta name="author" content="Sportlight">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style-podziekowania.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+	<div class="container-fluid black-canvas">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-0">
+				<img class="img-fluid img-elipse" src="elipse.svg"/>
+			</div>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<div class="row">
+						<div class="col-lg-12 text-center text-title" style="margin-top: 10vh;">
+							<p>Dziękujemy za Twoje zainteresowanie!</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-center text-below-title" style="margin-top: 2vh;">
+							<p>Prezentowane narzędzie jest aktualnie w fazie testów. Wkrótce planujemy wdrożenie platformy Sportlight na rynek. Już teraz zostaw swój adres e-mail, a będziesz pierwszą osobą, do której odezwiemy się kiedy projekt ujrzy światło dzienne.</p>
+							</br>
+							<p>Twórcy<p/>
+							</br>
+						</div>
+					</div>
+					<form>
+						<div class="row">
+							<div class="col-lg-4 offset-lg-2">
+								<div class="form-group">
+									<input type="text" class="form-control" id="nameInput" placeholder="Imię">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-group">
+									<input type="email" class="form-control" id="emailInput" placeholder="E-mail">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<button id="submit-button" type="submit" class="btn btn-primary btn-sm">Wyślij</button>
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+	</div>
+<script>
+
+$(document).ready(function(){
+$(document)
+    .on('click', '#submit-button', function(e) {
+        e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:8080/mailGate",
+			data: JSON.stringify({
+				email: $("#emailInput").val(),
+				name: $("#nameInput").val(),
+				text: "podziekowania"
+			}),
+			contentType: 'application/json;charset=UTF-8',
+			success: function(data, status){
+				//console.info("Data: " + data + "\nStatus: " + status);
+			},
+			error: function(data, status){
+				//console.info("Data: " + data + "\nStatus: " + status);
+			}
+		})
+    });
+});
+</script>  
+</body>
+</html>
