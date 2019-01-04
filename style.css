@@ -156,11 +156,10 @@
 	font-family: "Poppins";
 }
 
-a {
+.header-routes a {
 	color:inherit!important;
 	text-decoration:none!important;
 }
-
 
 
 
