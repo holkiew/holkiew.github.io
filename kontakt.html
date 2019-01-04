@@ -67,7 +67,7 @@ $(document)
         e.preventDefault();
 		$.ajax({
 			type: "POST",
-			url: "https://sportlight.herokuapp.com",
+			url: "https://sportlight.herokuapp.com/mailGate",
 			data: JSON.stringify({
 				email: $("#emailInput").val(),
 				name: $("#nameInput").val(),
