@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<img class="img-fluid img-elipse" src="elipse.svg"/>
+<img class="img-fluid img-elipse" src="img/elipse.svg"/>
   <div class="container-fluid black-canvas">
 	  <div class="row align-items-center">
 		<div class="col-lg-6 col-md-12">
@@ -22,10 +22,10 @@
 		<div class="col-lg-6 col-md-12">
 			<div class="row">
 				<div class="col-lg-12">
-					<span class="header-routes pink-route" >STRONA GŁÓWNA</span>
+					<span class="header-routes pink-route"><a href="">STRONA GŁÓWNA</a></span>
 					<span class="header-routes white-route" id="jaktodziala">JAK TO DZIAŁA</span>
-					<span class="header-routes white-route">SPORTLIGHT.BIZ</span>
-					<span class="header-routes white-route">KONTAKT</span>
+					<span class="header-routes white-route"><a href="biz.html">SPORTLIGHT.BIZ</a></span>
+					<span class="header-routes white-route"><a href="kontakt.html">KONTAKT</a></span>
 					<button type="button" class="btn btn-primary btn-sm" id="login-button">LOGIN</button>
 				</div>
 			</div>
@@ -48,12 +48,12 @@
 					<button type="button" class="btn btn-primary btn-sm" id="more-button">Dowiedz się więcej</button>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 text-center text-md-left mt-sm-0" style="margin-top: 2vh;">
-					<button type="button" class="btn btn-primary btn-sm" id="search-button">Zacznij wyszukiwanie</button>
+					<a href="podziekowania.html"><button type="button" class="btn btn-primary btn-sm" id="search-button">Zacznij wyszukiwanie</button></a>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3 d-none d-sm-block"  style="left: -5vw">
-			<img class="img-fluid" src="contender.svg"/>
+			<img class="img-fluid" src="img/contender.svg"/>
 		</div>
 	  </div>
 	</div>
@@ -77,35 +77,41 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-sm-12 col-xs-12  offset-lg-2 offset-md-1 text-align-center-sm-below">
-					<button type="button" class="btn btn-primary btn-sm" id="more-button2">Zacznij szukać</button>
+					<a href="podziekowania.html"><button type="button" class="btn btn-primary btn-sm" id="more-button2">Zacznij szukać</button></a>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-4 d-none d-sm-block" style="left: -5vw">
-			<img class="img-fluid" src="babka.svg"/>
+			<img class="img-fluid" src="img/babka.svg"/>
 		</div>
 	</div>
   </div>
 <script>
-
 $(document).ready(function(){
 $(document)
     .on('click', '#jaktodziala', function(e) {
-		console.info("dsadsa");
         e.preventDefault();
         var x = $(window).height() + $(window).scrollTop();
         $('html, body')
             .animate({
                 scrollTop: x}, 'slow', 'swing', function() {});
     });
-	});
-	
-	$.ajax({
-  type: "POST",
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
+$(document)
+    .on('click', '#more-button', function(e) {
+        e.preventDefault();
+        var x = $(window).height() + $(window).scrollTop();
+        $('html, body')
+            .animate({
+                scrollTop: x}, 'slow', 'swing', function() {});
+    });
+$(document)
+    .on('click', '#login-button', function(e) {
+        e.preventDefault();
+        var x = $(window).height() + $(window).scrollTop();
+        $('html, body')
+            .animate({
+                scrollTop: x}, 'slow', 'swing', function() {});
+    });
 });
 </script>  
 </body>

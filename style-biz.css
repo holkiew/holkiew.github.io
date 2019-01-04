@@ -89,4 +89,10 @@ body .p-1{
 	border-color: #FB3B64;
 }
 
+a {
+	color:inherit!important;
+	text-decoration:none!important;
+}
+
+
 

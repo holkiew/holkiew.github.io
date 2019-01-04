@@ -27,7 +27,7 @@
 		</div>
 		<div class="row" style="margin-top: 5vh;">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-0">
-				<img class="img-fluid img-elipse" src="elipse.svg"/>
+				<img class="img-fluid img-elipse" src="img/elipse.svg"/>
 			</div>
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 			<form>
@@ -67,7 +67,7 @@ $(document)
         e.preventDefault();
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:8080/mailGate",
+			url: "https://sportlight.herokuapp.com",
 			data: JSON.stringify({
 				email: $("#emailInput").val(),
 				name: $("#nameInput").val(),
