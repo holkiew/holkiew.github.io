@@ -92,7 +92,7 @@ $(document).ready(function(){
 $(document)
     .on('click', '#jaktodziala', function(e) {
         e.preventDefault();
-        var x = $(window).height() + $(window).scrollTop();
+        var x = $(".black-canvas")[0].scrollHeight;
         $('html, body')
             .animate({
                 scrollTop: x}, 'slow', 'swing', function() {});
@@ -100,7 +100,7 @@ $(document)
 $(document)
     .on('click', '#more-button', function(e) {
         e.preventDefault();
-        var x = $(window).height() + $(window).scrollTop();
+        var x = $(".black-canvas")[0].scrollHeight;
         $('html, body')
             .animate({
                 scrollTop: x}, 'slow', 'swing', function() {});
@@ -108,7 +108,7 @@ $(document)
 $(document)
     .on('click', '#login-button', function(e) {
         e.preventDefault();
-        var x = $(window).height() + $(window).scrollTop();
+        var x = $(".black-canvas")[0].scrollHeight;
         $('html, body')
             .animate({
                 scrollTop: x}, 'slow', 'swing', function() {});
