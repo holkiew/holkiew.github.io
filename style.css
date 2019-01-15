@@ -118,10 +118,14 @@
   }
 }
 
- @media (max-width: 767px) {
-    .text-align-center-sm-below {
+@media (max-width: 767px) {
+    .text-xs-center {
               text-align: center!important;
-	} 
+	}
+	
+	.sportlight-logo-text {
+	font-size: 17vw;
+}
 }
 
 @media screen and (max-width: 800px) {
