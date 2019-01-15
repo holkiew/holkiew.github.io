@@ -13,6 +13,33 @@
   }
 }
 
+.btn.active span.nonCheckBoxAllow {
+  display: none;
+}
+
+.btn.active span.checkBoxAllow {
+  display: inline;
+}
+
+.btn span.nonCheckBoxAllow {
+  display: inline;
+}
+
+.btn span.checkBoxAllow {
+  display: none;
+}
+
+.btn-success {
+    background-color: red!important;
+    border-color: red!important;
+}
+
+.active {
+    background-color: #1e7e34!important;
+    border-color: #1c7430!important;
+
+}
+
 #submit-button {
 	padding:.5rem 2.5rem;
 	border-radius: 48px;
@@ -25,6 +52,10 @@
   }
 
 body p {
+	font-family: "Poppins";
+}
+
+body a {
 	font-family: "Poppins";
 }
 
