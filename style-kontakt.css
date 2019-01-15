@@ -41,6 +41,12 @@ body p {
 	font-size: 2rem;
 }
 
+ @media (max-width: 767px) {
+    .text-xs-center {
+              text-align: center!important;
+	} 
+}
+
 
 
 

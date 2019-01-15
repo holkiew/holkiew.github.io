@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Britannic";
+  src: url(font/Britannic.ttf);
+}
+
 .black-canvas {
   background-color: #071828;
   height: 100%;
@@ -156,7 +161,12 @@
 	font-family: "Poppins";
 }
 
-.a-link {
+a {
+	color:inherit!important;
+	text-decoration:none!important;
+}
+
+a {
 	color:inherit!important;
 	text-decoration:none!important;
 }
