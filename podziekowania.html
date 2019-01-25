@@ -16,6 +16,15 @@
 </head>
 
 <body>
+<div>
+	<div id="loader">
+		<div id="loader-canv"></div>
+		<div id="loader-spinner">
+			<div class="spinner-border text-primary"  role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+	</div>
 	<div class="container-fluid black-canvas">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-0">
@@ -71,6 +80,7 @@
 			</div>
 		</div>
 	</div>
+	</div>
 <script>
 
 $(document).ready(function(){
@@ -82,23 +92,31 @@ $(document)
 			$('#rules-text').animate({opacity: 1}, 700 );
 			return;
 		}	
+		$('#loader-canv').css({opacity: 0});
+		document.getElementById("loader").style.display = "block";
+		$('#loader-canv').animate({opacity: 0.5}, 500 );
+		
 		$.ajax({
 			type: "POST",
 			url: "https://sportlight.herokuapp.com/mailGate",
 			data: JSON.stringify({
 				email: $("#emailInput").val(),
 				name: $("#nameInput").val(),
-				text: "podziekowania"
+				text: "",
+				type: "podziekowania"
 			}),
 			contentType: 'application/json;charset=UTF-8',
 			success: function(data, status){
-				//console.info("Data: " + data + "\nStatus: " + status);
+				document.getElementById("loader").style.display = "none";
+				setTimeout(function(){
+					window.location = '/';
+				}, 700);
+				
 			},
 			error: function(data, status){
 				//console.info("Data: " + data + "\nStatus: " + status);
 			}
 		})
-		window.location = '/';
     });
 });
 </script>  
